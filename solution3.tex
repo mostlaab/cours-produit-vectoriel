@@ -1,0 +1,65 @@
+\begin{frame}[plain,label=sol3]{ حل التمرين} %[allowframebreaks]
+\begin{block}{حل التمرين} 
+	\begin{dingautolist}{192}
+		\item 
+		\begin{align*}
+		\overrightarrow{AB} \land \overrightarrow{AC} =&\begin{pmatrix}-1 \\1 \\ 0
+		\end{pmatrix} \land \begin{pmatrix}-1 \\0 \\ 1
+		\end{pmatrix}
+		\\
+		=& \left |\begin{array}{cc} 1&0\\0&1\end{array}\right |\vec{i}- \left |\begin{array}{cc} -1&-1\\0&1\end{array}\right |\vec{j}+ \left |\begin{array}{cc} -1&-1\\1&0\end{array}\right |\vec{k} \\
+		=&+\vec{i}+\vec{j}+\vec{k} \\
+		=&\begin{pmatrix}1 \\1\\ 1 \end{pmatrix}
+		\end{align*}
+		\item 
+		$\quad \iff \overrightarrow{AB} \land \overrightarrow{AC} \neq \vec{0}  $
+		النقط A,B,C غيرمستقيمية
+	\end{dingautolist}
+\hyperlink{ex3}{\fbox{\textarabic{الرجوع للتمرين}}}
+\hyperlink{}{\fbox{\textarabic{تتمة حل التمرين}}}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile,label=sol3bis]
+\begin{block} {حل التمرين}
+ 	\begin{align*}
+	M(x,y,z) \in (ABC) & ~\iff  \overrightarrow{AM} \times (\overrightarrow{AB} \land \overrightarrow{AC})=0  \\
+	&\iff \begin{pmatrix}x-1 \\y\\ z\end{pmatrix} \times \begin{pmatrix}1 \\1\\ 1
+	\end{pmatrix}=0 \\
+	& \iff x-1+y+z=0 \\
+	& (ABC):x+y+z=1
+	\end{align*} 
+	\hyperlink{sol3bisautre}{\fbox{\textarabic{الطريقة الثانية}}}
+	\hyperlink{ex3}{\fbox{\textarabic{الرجوع للتمرين}}}
+\end{block}
+%	\begin{tikzpicture}[remember picture,overlay]
+%	\node[shift={(-1cm,1cm)}]() at (current page.south east){%
+%		\hyperlink{sol3bis}{\beamerreturnbutton{\textarabic{الطريقة التانية}}}};  
+%%\hyperlink{ex3}{\fbox{الرجوع للتمرين}}}};        
+%	\end{tikzpicture}
+\end{frame}
+	\begin{frame}[label=sol3bisautre]
+	\begin{block} {الطريقة التانية}
+		$ \overrightarrow{AB} \land \overrightarrow{AC}=\begin{pmatrix}1 \\1\\ 1
+		\end{pmatrix} $
+		منظمية على المستوى $ (ABC) $ 
+		
+		اذن معادلة المستوى تكتب على شكل 
+		$ (ABC):x+y+z+d=0 $
+		
+		وبماان 
+		 $ A \in (ABC) $
+		وبتعويض احداثيات A في هذه المعادلة نحصل على 
+		
+		$ 1+0+0+d=0 $
+		أي
+		$ d=-1 $
+		
+		ومنه معادلة المستوى هي :
+
+			$ (ABC):x+y+z-1=0 $
+		 
+		\hyperlink{ex3}{\fbox{\textarabic{الرجوع للتمرين}}}
+	\end{block}
+\end{frame}

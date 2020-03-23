@@ -1,0 +1,217 @@
+\documentclass{beamer}
+\input{entete}
+%\listfiles %si on veut afficher la liste des packages dans le fichier log
+\begin{document}
+\include{page_garde}%page de garde et sommaire
+
+\section{ تعريف }
+\include{definition}
+\include{doc1}
+
+\section{ استقامية متجهتين}
+\include{doc2}
+\section{تطبيقات}
+\subsection{معادلة مستوى}
+\include{doc3}%معادلة مستوى + تمرين 
+
+\subsection{مسافة نقطةعن مستقيم}
+\include{doc4}
+
+\subsection{‫مساحة ‬}
+\begin{frame}{مساحة مثلث‬}
+	\begin{block}{خاصية}
+		$ S_{ABC} = \dfrac{1}{2} (\overrightarrow{AB}\land \overrightarrow{AC})$
+		هي مساحة المثلث ABC
+	\end{block}
+	
+	\begin{block}{ملحوظة }
+		
+		$ S =\overrightarrow{AB}\land \overrightarrow{AC}$
+		هي مساحة متوازي الاضلاع   ABDC
+	\end{block}
+\end{frame}
+
+%%%==============================================================
+%\section{}\begin{frame}{}\end{frame}
+\section{ اضافات}
+\begin{frame}{صيغتا $ \cos$ و $ \sin $ }
+	\begin{block}{خاصية}
+		(i) $\cos(\overrightarrow{u},\overrightarrow{v})=\frac{\overrightarrow{u}.\overrightarrow{v}}{\Vert u \Vert \Vert v \Vert}$ 
+		\hspace{2cm}(ii) $\vert \sin(\overrightarrow{u},\overrightarrow{v}) \vert=\frac{\Vert \overrightarrow{u} \wedge \overrightarrow{v} \Vert}{\Vert u \Vert \Vert v \Vert}$
+	\end{block}
+\end{frame}
+\begin{frame}{موجهة تقاطع مستويين}
+\begin{block}{خاصية}
+	$\vec{n}\land \vec{n'}$
+	موجهة لمستقيم تقاطع المستويين اللذين منظميتهما هما  
+	$\vec{n}$ و $\vec{n'}$
+\end{block}
+مثال :
+حدد موجهة تقاطع المستويين 
+$ (D_1) $
+و
+$ (D\_2) $
+بحيث 
+\begin{align*}
+(D_1):	2x-y+2z-3&=0 \\
+(D_2):	3x+y-4z+1&=0
+\end{align*}	
+الحل :
+\pause
+\begin{block}{}
+	$ (2;-1;2)\land (3;1;-4)=(2;14;5) $
+\end{block}
+\end{frame}
+\section{ الحلول  } 
+\begin{frame}{النهاية}
+\begin{block}{نهاية الدرس}\huge
+	انتهى الدرس و فيما يلي  حلول التمارين المدرجة فيه
+\end{block}
+	
+\end{frame}
+%\begin{tikzpicture}
+%	\foreach \i in {1,2,...,4}{\include{solution\i}};
+%\end{tikzpicture}
+\include{solution1}
+\include{solution2}
+\include{solution3}
+\include{solution4}
+	\end{document}%%%==============================================================%%%==============================================================%%%==============================================================%%%==============================================================%%%==============================================================
+\begin{frame}[label=sol]{	تصحيح التمرين }
+\begin{exo}
+	
+\end{exo}
+\end{frame}
+
+=====================
+\section{ }\begin{frame}{}
+
+\end{frame}
+\only<1>{% solution ex1
+	\begin{block}{1 حل التمرين} 
+		
+	\end{block}
+}
+=====================
+\section{}\begin{frame}{}
+
+\end{frame}
+
+https://fr.wikipedia.org/wiki/Produit_vectoriel#/media/Fichier:Technique_de_calcul_du_produit_vectoriel.gif
+
+%%%%%%%%%%%%%%%%%  codes reutilisables  %%%%%%%%%%%%%%%%%
+\begin{small}
+\begin{columns}
+	\begin{column}{0.3\linewidth}
+		\begin{itemize}
+			\item[$\textcolor{red!90!black}{\bigstar}$]
+			AA
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.7\linewidth}
+	\includegraphics[width=\linewidth]{example-image}
+\end{column}
+\end{columns}
+\end{small} 
+%%%%%%%%%%%%%%%%%%%
+\subsection{Distance entre deux points}
+Soient $A(x_{A},y_{A},z_{A})$, $B(x_{B},y_{B},z_{B})$. Alors $d(A,B)=\Vert \overrightarrow{AB} \Vert=\sqrt{\overrightarrow{AB}.\overrightarrow{AB}}=\sqrt{(x_{B}-x_{A})^{2}+(y_{B}-y_{A})^{2}+(z_{B}-z_{A})^{2}}$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{example-image}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+	\begin{itemize}[<+->]
+		\item First.
+		\item Second.
+		\item Third.
+		\item Fourth.\hypertarget<4>{label}{\beamerbutton{I'm on the fourth slide}}
+		\item Fifth.
+	\end{itemize}
+	\columnbreak
+	autre colonne
+\end{multicols}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{title}
+\begin{multicols}{2}%package multicol
+	\begin{minipage}{.5\textwidth}
+		\centering
+		gauche	 in minipage
+	\end{minipage}
+	\vfill
+	\begin{minipage}{.5\textwidth}
+		\centering
+		droite in mini page
+	\end{minipage}
+\end{multicols}
+content
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{small}
+\begin{columns}
+	\begin{column}{0.3\linewidth}
+		\begin{itemize}
+			\item[$\textcolor{red!90!black}{\bigstar}$]
+			AA
+			\item[$\textcolor{red!90!black}{\bigstar}$]
+			AA
+			\item[$\textcolor{red!90!black}{\bigstar}$]
+			AA
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.7\linewidth}
+		\includegraphics[width=\linewidth]{example-image}
+	\end{column}
+\end{columns}
+%\end{small} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%  exo et sa  solution  %%%%%%%%%%%%
+%%%%%%%%%%%%%%%  model cours  exo sol     %%%%%%%%%%%%%%%%%%%%%%
+
+%\section{ title}
+%\subsection{title}
+\begin{frame}[option]{titlecours}
+content
+\begin{block}{titre}
+	content
+\end{block}
+\end{frame}
+\begin{frame}[label=ex4]{تمرين تطبيقي}
+content
+\begin{exo}
+	content
+	\begin{dingautolist}{192}
+		\item	
+	\end{dingautolist} 
+\begin{block}{titre}
+	content
+\end{block}
+
+\hyperlink{sol4}{\fbox{انقر هنا لتصحيح التمرين }}
+%\hyperlink{sol4}{ \beamerbutton{تصحيح التمرين 	}}
+\end{exo}
+
+\hyperlink{sol4}{\beamerbutton{حل التمرين }}
+\end{frame}
+
+
+\begin{frame}[fragile,label=sol4]{حل التمرين} 
+% solution ex4
+%\hypertarget<2->{ex2}{\beamerbutton{هناتصحيح  التمرين  }}
+\begin{block}{ حل التمرين} 
+
+\begin{dingautolist}{192}
+\item
+
+\end{dingautolist} 
+\hyperlink{ex4}{\fbox{انقر هنا للرجوع للتمرين }}
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%% fin model cours  exo sol     %%%%%%%%%%%%%%%%%%%%%%
+
+

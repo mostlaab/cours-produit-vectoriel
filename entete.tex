@@ -1,0 +1,155 @@
+\makeatletter \newcommand{\leftm}{\@totalleftmargin}\makeatother
+\newcommand{\RTListe}{\raggedleft\rightskip\leftm}
+
+\usepackage{hyperref}
+
+\usetheme{Frankfurt}%Frankfurt,CambridgeUS,Madrid
+\setbeamertemplate{footline}[frame number]
+\usefonttheme[]{serif}
+%\useoutertheme{miniframes}
+\usecolortheme{crane}
+\usecolortheme{seahorse}   %seahorse, wolverine,beaver, default, albatross, beaver, crane, dolphin, lily, orchid, rose, whale
+\setbeamercovered{transparent} 
+
+\useinnertheme[shadow=true]{rounded}
+\usepackage{etoolbox}
+%\setbeamercolor{block title}{use=structure,fg=structure.fg,bg=structure.fg!20!bg}
+%\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!50!bg}
+%\usecolortheme{wolverine}%,wolverine,albatross,whale,seahorse,rose
+
+\usepackage{tikz,pifont}
+\usetikzlibrary{shapes.gates.logic.US,trees,positioning,arrows}
+\definecolor{BrickRed}{RGB}{132,31,39}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes}
+\usepackage{tcolorbox}
+\usepackage{multicol,color}
+\usepackage{varwidth}
+\numberwithin{equation}{section}
+
+% for RTL liste
+\newcommand{\rr}{\mathbb{R}}\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cc}{\mathbb{C}}
+
+
+
+% RTL frame title
+\setbeamertemplate{frametitle}
+{\vspace*{-1mm}
+	\nointerlineskip
+	\begin{beamercolorbox}[sep=0.4cm,ht=2.0em,wd=\paperwidth]{frametitle}
+		\vbox{}\vskip-2ex%
+		\strut\hskip1ex\insertframetitle\strut
+		\vskip-0.8ex%
+	\end{beamercolorbox}
+}
+
+% align subsection in toc
+\makeatletter
+\setbeamertemplate{subsection in toc}
+{\leavevmode\rightskip=5ex%
+	\llap{\raise0.1ex\beamer@usesphere{subsection number projected}{bigsphere}\kern1ex}%
+	\inserttocsubsection\par%
+}
+\makeatother
+
+% RTL triangle for itemize
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleleft$}} 
+
+%\setbeamertemplate{itemize item}{\rule{4pt}{4pt}}
+
+\defbeamertemplate{enumerate item}{square2}
+{\LR{
+		%
+		\hbox{%
+			\usebeamerfont*{item projected}%
+			\usebeamercolor[bg]{item projected}%
+			\vrule width2.25ex height1.85ex depth.4ex%
+			\hskip-2.25ex%	
+			\hbox to2.25ex{%
+				\hfil%
+				{\color{fg}\insertenumlabel}%
+				\hfil}%
+		}%
+}}
+
+\setbeamertemplate{enumerate item}[square2]
+
+\setbeamertemplate{navigation symbols}{}
+\logo{مصطفى لعببدي} %logo texte
+
+\newcommand{\V}[1]{\overrightarrow{#1}}
+%==================================
+\tcbuselibrary{skins,listings,breakable,xparse}
+\tcbset{enhanced,boxrule=1pt,sharp corners,rounded corners=all,bicolor,colback=green!10!white,colbacklower=white,colframe=BrickRed}
+
+\usepackage{newverbs}
+\newverbcommand{\cverb}{\color{blue}}{}
+%\AtBeginSection[]
+%{
+%	\begin{frame}{}
+%	\tableofcontents[currentsection] %current
+%\end{frame}
+%}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}{}
+%	\tableofcontents[currentsubsection,hideothers] %current
+%\end{frame}
+%}
+%\setbeameroverlaytransparent
+%=================================================================
+\author{ذ:	مصطفى لعبيدي }
+\title{ \huge	الجداء المتجهي }
+\institute[lycee Tarik]{\textarabic{ثانوية طارق بن زيادالتاهيلية \\
+بازرو}}
+%=================================================================
+
+\newcounter{exocount}
+\setcounter{exocount}{0}
+\newenvironment{exo}{\stepcounter{exocount}\begin{block}{تمرين ~\theexocount}}%
+	{\end{block}}
+
+%===================================================================
+\usepackage{polyglossia}
+\setdefaultlanguage[locale=algeria]{arabic}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1]{Amiri}
+\setotherlanguage{french}
+\let\arabicfonttt\ttfamily
+%===================================================================
+%\lstdefinestyle{json}{
+%	language=[LaTeX]TeX,
+%	,escapeinside=``,
+%	keywordstyle=\color{blue},%
+%	upquote=true,
+%	columns=flexible,
+%	texcsstyle=*\color{blue},
+%	basicstyle=\scriptsize,
+%	stringstyle=\color{blue},
+%	commentstyle=\color{red},	moretexcs={xymatrix,setbeamertemplate,usetheme,usefonttheme,,rotatebox,diagbox,newcolumntype,arraybackslash,underbracket,mathclap,closedcycle,setbeamercolor,url,rowcolors,appendix,filldraw,foreach,shade,path,definecolor,color,underset,textcolor,tikzstyle,tikzset,part,RL,LR,setdefaultlanguage,setotherlanguage,newfontfamily,arabicfont,text,iint,iiint,dfrac,tfrac,multirow,href,rhead,cfoot,thesection,lhead,fancyplain,leftmark,chapter,tableofcontents,savebox,maketitle,mathbb,includegraphics, systeme,setlength,contentsname,sysequivsign,sysaddeqsign,labelenumii,labelenumi,alph,textLR,
+%		arabicfontsf,arabicfonttt,draw,node, addcontentsline,addplot,numberwithin,bibname,sysautonum,syscodeextracol,sysextracolsign,syslineskipcoeff,efootnote,subsection,subsubsection,abstractname,textsubscript,mathcal}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{tikz}
+\usetikzlibrary{fit,calc,positioning}
+\tikzset{%
+	highlight/.style={rectangle,rounded corners,fill=red!15,draw,fill opacity=0.5,thick,inner sep=0pt}
+}
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline=(#1.base)] \node (#1) {#2};}
+%
+\newcommand{\Highlight}[1][submatrix]{%
+	\tikz[overlay,remember picture]{
+		\node[highlight,fit=(left.north west) (right.south east)] (#1) {};}
+}
+\newcommand{\antiHighlight}[1][submatrix]{%
+	\tikz[overlay,remember picture]{
+		\node[highlight,fit=(left.north west) (right.south east),dashed] (#1) {};}
+}
+
+\newcommand{\tikzcontour}[1]{\tikz[overlay,remember picture] \node[red,draw,dotted,opacity=.7,inner sep=0pt] (#1) {#1};}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
